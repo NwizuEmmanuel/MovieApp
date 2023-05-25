@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.moviephlix.controller.AddViewController">
+   <Label layoutX="14.0" layoutY="14.0" text="Movie Title">
+      <font>
+         <Font name="Courier New Bold" size="15.0"/>
+      </font>
+   </Label>
+   <TextField fx:id="title_input" layoutX="204.0" layoutY="11.0" prefHeight="25.0" prefWidth="261.0"
+              promptText="Ex. Batman"/>
+   <Label layoutX="6.0" layoutY="50.0" text="Movie Director">
+      <font>
+         <Font name="Courier New Bold" size="15.0"/>
+      </font>
+   </Label>
+   <TextField fx:id="director_input" layoutX="204.0" layoutY="47.0" prefHeight="25.0" prefWidth="261.0"
+              promptText="Ex. Zack Synder"/>
+   <Spinner fx:id="year_input" editable="true" layoutX="204.0" layoutY="84.0"/>
+   <Label layoutX="10.0" layoutY="87.0" text="Release Year">
+      <font>
+         <Font name="Courier New Bold" size="15.0"/>
+      </font>
+   </Label>
+   <Spinner fx:id="runtime_input" editable="true" layoutX="204.0" layoutY="122.0"/>
+   <Label layoutX="6.0" layoutY="125.0" text="Movie Runtime (hrs)">
+      <font>
+         <Font name="Courier New Bold" size="15.0"/>
+      </font>
+   </Label>
+   <Label layoutX="6.0" layoutY="183.0" text="Movie File">
+      <font>
+         <Font name="Courier New Bold" size="15.0"/>
+      </font>
+   </Label>
+   <TextArea fx:id="filepath_input" layoutX="197.0" layoutY="173.0" prefHeight="40.0" prefWidth="276.0"
+             promptText="path to move" wrapText="true"/>
+   <Button layoutX="197.0" layoutY="224.0" mnemonicParsing="false" onAction="#addFileAction" text="add file">
+      <graphic>
+         <FontAwesomeIconView glyphName="PLUS"/>
+      </graphic>
+   </Button>
+   <Button layoutX="353.0" layoutY="353.0" mnemonicParsing="false" onAction="#saveAction" text="Save">
+      <graphic>
+         <FontAwesomeIconView glyphName="SAVE"/>
+      </graphic>
+   </Button>
+   <Button layoutX="502.0" layoutY="353.0" mnemonicParsing="false" onAction="#cancelAction" text="Cancel">
+      <graphic>
+         <FontAwesomeIconView glyphName="REMOVE"/>
+      </graphic>
+   </Button>
+</AnchorPane>

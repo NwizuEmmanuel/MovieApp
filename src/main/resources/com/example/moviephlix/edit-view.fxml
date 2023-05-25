@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.moviephlix.controller.EditViewController">
+    <Label layoutX="11.0" layoutY="48.0" text="Movie Title">
+        <font>
+            <Font name="Courier New Bold" size="15.0"/>
+        </font>
+    </Label>
+    <TextField fx:id="title_input" layoutX="197.0" layoutY="45.0" prefHeight="25.0" prefWidth="261.0"
+               promptText="Ex. Batman"/>
+    <Label layoutX="10.0" layoutY="88.0" text="Movie Director">
+        <font>
+            <Font name="Courier New Bold" size="15.0"/>
+        </font>
+    </Label>
+    <TextField fx:id="director_input" layoutX="197.0" layoutY="85.0" prefHeight="25.0" prefWidth="261.0"
+               promptText="Ex. Zack Synder"/>
+    <Spinner fx:id="year_input" editable="true" layoutX="197.0" layoutY="126.0"/>
+    <Label layoutX="10.0" layoutY="129.0" text="Release Year">
+        <font>
+            <Font name="Courier New Bold" size="15.0"/>
+        </font>
+    </Label>
+    <Spinner fx:id="runtime_input" editable="true" layoutX="197.0" layoutY="164.0"/>
+    <Label layoutX="10.0" layoutY="167.0" text="Movie Runtime (hrs)">
+        <font>
+            <Font name="Courier New Bold" size="15.0"/>
+        </font>
+    </Label>
+    <Label layoutX="10.0" layoutY="220.0" text="Movie File">
+        <font>
+            <Font name="Courier New Bold" size="15.0"/>
+        </font>
+    </Label>
+    <TextArea fx:id="filepath_input" layoutX="197.0" layoutY="210.0" prefHeight="40.0" prefWidth="276.0"
+              promptText="path to move" wrapText="true"/>
+    <Button layoutX="197.0" layoutY="261.0" mnemonicParsing="false" onAction="#addFileAction" text="add file">
+        <graphic>
+            <FontAwesomeIconView glyphName="PLUS"/>
+        </graphic>
+    </Button>
+    <Button layoutX="353.0" layoutY="353.0" mnemonicParsing="false" onAction="#updateAction" text="update">
+        <graphic>
+            <FontAwesomeIconView glyphName="EDIT"/>
+        </graphic>
+    </Button>
+    <Button layoutX="502.0" layoutY="353.0" mnemonicParsing="false" onAction="#cancelAction" text="Cancel">
+        <graphic>
+            <FontAwesomeIconView glyphName="REMOVE"/>
+        </graphic>
+    </Button>
+    <Label layoutX="11.0" layoutY="17.0" text="Movie ID">
+        <font>
+          <Font name="Courier New Bold" size="15.0"/>
+        </font>
+    </Label>
+    <Label fx:id="movie_id_label" layoutX="195.0" layoutY="17.0">
+        <font>
+          <Font name="Courier New Bold" size="15.0"/>
+        </font>
+    </Label>
+</AnchorPane>
