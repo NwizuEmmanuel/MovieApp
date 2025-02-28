@@ -1,20 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.media.*?>
 
-<BorderPane fx:id="pane" prefHeight="520.0" prefWidth="628.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.moviephlix.controller.MediaPlayerController">
+<BorderPane fx:id="pane" prefHeight="520.0" prefWidth="306.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.moviephlix.controller.MediaPlayerController">
    <center>
-      <MediaView fx:id="mediaView">
-      </MediaView>
+      <Pane prefHeight="96.0" prefWidth="628.0" BorderPane.alignment="CENTER">
+         <children>
+            <MediaView fx:id="mediaView">
+         </MediaView>
+         </children>
+      </Pane>
    </center>
    <bottom>
-      <HBox alignment="CENTER" prefHeight="50.0" prefWidth="628.0" spacing="30.0" BorderPane.alignment="CENTER">
-         <Button mnemonicParsing="false" onAction="#playAction" text="play"/>
-         <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#pauseAction" text="pause"/>
-         <Button layoutX="62.0" layoutY="10.0" mnemonicParsing="false" onAction="#stopAction" text="stop"/>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onAction="#playAction" text="play" />
+            <Button mnemonicParsing="false" onAction="#pauseAction" text="pause" />
+            <Button mnemonicParsing="false" onAction="#stopAction" text="stop" />
+         </children>
       </HBox>
    </bottom>
 </BorderPane>

@@ -6,7 +6,7 @@ public class Database {
 
     final String url = "jdbc:mysql://localhost:3306/movie_db";
     final String user = "root";
-    final String password = "1234";
+    final String password = "";
     final String tableName = "movie_table";
     final int numCols = 6;
 
